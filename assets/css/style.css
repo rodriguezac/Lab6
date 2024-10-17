@@ -1,140 +1,265 @@
-/* Estilo global */
-*{
+/* Estilo global */ 
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #bde0fe ;
+    font-family: 'Poppins', sans-serif;
 }
+/* Cierre de estilo global */
 
-body{
-    font-family: Arial, sans-serif;
-    margin: 20px;
+body {
+    line-height: 1.6;
+    margin: 0;
     padding: 0;
-    background-color: #003049;
+    background-color: #FCECDF; 
+    color: #9E122C;
 }
 
 header {
+    background: #9E122C;
+    color: #FCECDF;
     text-align: center;
-    padding: 20px;
-    border-bottom: 2px solid #003049;
+    justify-content: space-evenly;
+    padding: 2rem 0;
 }
 
-header h1 {
-    margin-bottom: 10px;
-    font-size: 2.5em;
+h1 {
+    font-size: 3rem;
+    letter-spacing: 3px;
+    margin-bottom: 0.5rem;
 }
-  
-  header .lead {
-    font-size: 1.2em;
-    color: #003049;
+
+.lead {
+    font-size: 1.5rem;
+    margin-top: 0;
 }
 
 /* NAVBAR CSS */
-.navbar{
-    background-color: #003049;
-    padding: 8px;
-    margin: 18px;
+
+.navbar {
+    background-color: #3f0013; 
+    padding: 22px;
+    display: flex;
+    justify-content: space-evenly;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 .navbar ul {
     list-style: none;
     display: flex;
-    background-color: #003049;
-    
+    width: auto;
+    justify-content: space-evenly;
+    gap: 0;
+    padding: 0;
 }
 
-.navbar ul li a{
+.navbar ul li {
+    margin: 0;
+}
+
+.navbar ul li a {
+    position: relative;
     text-decoration: none;
-    padding: 10px;
-    color: #669bbc;
-    background-color: #003049;
-    font-size: 1em;
+    padding: 12px 20px;
+    margin-left: 40px;
+    color: #FCECDF; 
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: #3f0013;
+    transition: color 0.3s;
+}
+
+/* pequña Animación */
+.navbar ul li a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #F4F4F8; 
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #f99d90;
+}
+
+.navbar ul li a:hover::before {
+    background-color: #f99d90;
+    width: 100%;
 }
 
 /* Publicaciones: */
 
-.post{
-    background-color: #bde0fe;
-    box-shadow: 4px 4px 16px rgba(188, 218, 222, 0.1);
-    padding: 20px;
-    margin: 20px;
-    border: 4px solid #003049;
+.post {
+    max-width: 900px;
+    margin: 2rem auto;
+    background-color: #1e0505;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border: 2px solid #1e0505;
+    transition: transform 0.3s ease;
+
 }
 
-.post-header{
-    background-color: #bde0fe;
-}
-.post-header h3{
-    margin-bottom: 8px;
-    font-size: 1.5em;
-    background-color: #bde0fe;
-}
-.post-header img{
-    margin: 0;
-    padding: 8px;
-    display: block;
-    border: #f9f9f9;
-    border-width: 2px;
+.post:hover {
+    transform: translateY(-10px);
 }
 
-.post-header .subtitulo{
-    color: #2d5576;
-    font-size: 1em;
-    background-color: #bde0fe;
-}
-
-.post-body{
-    margin: 0;
-    padding: 8px;
-    line-height: 1;
-    text-align: justify;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #bde0fe;
-}
-
-/* TABLA */
-
-table {
-    border-collapse: collapse;
-    margin: 18px ;
-    width: 100%;
-    
-}
-  
-table th, table td {
-    border: 1px solid #fff6f6;
-    padding: 10px;
-    text-align: left;
-}
-  
-table td{
-    background-color: #3b6d99;
-    color: #f9f9f9;
-}
-table th {
-    background-color: #2d5576;
-    color: #fff;
-}
-
-footer{
-    background-color: #003049;
-    padding: 18px;
-    border-top: 4px solid #669bbc;
+.post-header {
     text-align: center;
+    margin-bottom: 2rem;
 }
 
-footer h4{
-    padding: 0;
-    margin-bottom: 18px;
+.post-header h3 {
+    font-size: 2rem;
+    color: #e17959;
+}
+
+.post-header img {
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.subtitulo {
+    font-size: 1rem;
+    color: #EDD9B7;
+}
+
+.post-header .subtitulo a {
+    color: #EDD9B7;
     font-size: 1em;
+    text-decoration:underline;
 }
 
-fotter form{
-    display: inline-block;
+.post-body p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #F3E9DC;
+    text-align: justify;
 }
 
-footer label {
+.post-body em {
+    font-style: italic;
+    color: #fdcc95;
+}
+
+.post-body a{
+    color: #ffdaab;
+    font-size: 1em;
+    text-decoration:underline;
+}
+table img {
+    height: auto;
+    max-width: 100%;
+    display: block; 
+    justify-content: center;
+}
+
+/* Tabla */
+table {
+    width: 100%;
+    margin-top: 1.5rem;
+    border-collapse: collapse;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 12px;
+    border: 4px solid #1e0505;
+}
+
+table th {
+    background-color: #D4A64E;
+    color: #352303;
+    font-weight: bold;
+}
+
+table td {
+    background-color: #F2A900;
+    color: #654406;
+}
+
+/* Footer */
+footer {
+    background-color: #620b1b;
+    color: #EDD9B7;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+footer h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+footer form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+fieldset {
+    border: none;
+}
+
+label {
     display: block;
-    margin-bottom: 10px;
-    font-size: 1em;
+    margin: 0.5rem 0;
 }
-  
+
+/* Estilos para los inputs */
+input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc; 
+    background-color: #F4F4F8;
+    color: #172121;
+    font-size: 1rem;
+    transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+}
+
+input::placeholder {
+    color: #D4A64E;
+    transition: color 0.3s;
+}
+
+/* Cambia el color del placeholder cuando el usuario hace hover */
+input:hover::placeholder {
+    color: #A69A55;
+}
+
+/* cambio de color si el usuario escribe en el placeholder */
+input:focus {
+    border-color: #D4A64E;
+    background-color: #fab3b3;
+    color: #F4F4F8;
+
+}
+
+input:focus::placeholder {
+    color: #F7B833;
+}
+
+input[type="checkbox"] {
+    margin-top: 10px;
+}
+
+.submitbutton {
+    background-color: #eedbbf;
+    color: #0F0000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submitbutton:hover {
+    background-color: #a9b983;
+}
